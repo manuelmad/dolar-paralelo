@@ -1,0 +1,92 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: "Bai Jamjuree", sans-serif;
+	font-size: 62.5%;
+}
+
+:root {
+	--very-light-gray:#efefef;
+	--text-input-field: #F7F7F7;
+	--hospital-green: #ACD982;
+	--very-light-blue:#e9f1f8;
+	--dark-blue: #252C5A;
+	--light-blue: rgb(195, 244, 254);
+	--white: #FFFFFF;
+	--black: #000000;
+	--medium-blue: #048ba3;
+	--kind-pink: #f7e8e3;
+	--dark-pink:  #f8879a;
+	--background: #fcf9f9;
+
+	--rojo-granate: #AB2A3E;
+    --dark-red: rgb(154, 2, 2);
+	--green: green;
+	--verde-planta: #7eab2a;
+	--verde-azulado: #2aab97;
+	--morado-brillante: #562aab;
+	--azul-brillante: #2a3eab;
+	--granate-oscuro: #401017;
+
+	--dark-orange: rgb(131, 86, 3);
+	--light-orange: rgb(252, 231, 192);
+	--dark-yellow: rgb(221, 221, 3);
+	--light-yellow: rgb(252, 252, 176);
+
+	--dark-grey: rgb(36, 36, 36);
+	--light-grey: rgb(159, 157, 157);
+
+	--granate-claro: #b73d4b;
+
+	--ss: 1.2rem;
+	--sm: 1.4rem;
+	--md: 1.5rem;
+	--lg: 2rem;
+	--xlg: 2.4rem;
+	--xxlg: 3.5rem;
+	--xxxlg: 5.5rem;
+}
+
+header {
+	background-color: var(--dark-red);
+	color: var(--white);
+	font-size: var(--lg);
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 10rem;
+	margin-bottom: 4rem;
+}
+
+main {
+    font-size: var(--md);
+}
+
+main div:nth-child(1), main div:nth-child(2) {
+	min-height: 20rem;
+	text-align: center;
+}
+
+main div:nth-child(3), main div:nth-child(4) {
+	min-height: 10rem;
+	text-align: center;
+}
+
+main div span {
+	font-size: var(--lg);
+	font-weight: bold;
+	color: var(--dark-red);
+}
+
+#bcv_logo img, #enparalelo_logo img  {
+    width: 10rem;
+}
+
+#enparalelo_logo img  {
+    width: 9rem;
+}
