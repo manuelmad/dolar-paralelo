@@ -54,7 +54,7 @@ async function getRates(url1) {
 */
     let average_rate;
 
-    if(res1.status == 200 && res2.status == 200) {
+    if(res1.status == 200) {
         average_rate = (bcv_rate+enparalelo_rate)/2;
         average_container.innerHTML = `<span>${average_rate.toFixed(1)}</span> Bs./USD`;
 
