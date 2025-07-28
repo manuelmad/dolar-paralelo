@@ -4,7 +4,7 @@ const bcv_url = `${base_url}/api/v1/dollar?page=bcv`;
 const bcv_logo = document.getElementById("bcv_logo");
 const bcv_rate_container = document.getElementById("bcv_rate_container");
 
-const bcv_eur_url = `${base_url}/api/v1/euro?page=bcv`;
+const bcv_eur_url = `${base_url}/api/v1/eur?page=bcv`;
 
 const enparalelo_url = `${base_url}/api/v1/dollar?page=enparalelovzla`;
 const enparalelo_logo = document.getElementById("enparalelo_logo");
