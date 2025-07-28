@@ -4,7 +4,7 @@ const bcv_url = `${base_url}/api/v1/dollar?page=bcv`;
 const bcv_logo = document.getElementById("bcv_logo");
 const bcv_rate_container = document.getElementById("bcv_rate_container");
 
-const bcv_eur_url = `${base_url}/api/v1/eur?page=bcv`;
+//const bcv_eur_url = `${base_url}/api/v1/eur?page=bcv`;
 
 const enparalelo_url = `${base_url}/api/v1/dollar?page=enparalelovzla`;
 const enparalelo_logo = document.getElementById("enparalelo_logo");
@@ -16,28 +16,32 @@ const average_container = document.getElementById("average_container");
 const date = document.getElementById("date");
 
 
-async function getRates(url1, url2) {
+async function getRates(url1) {
     const res1 = await fetch(url1);
     const data1 = await res1.json();
 
-    const res2 = await fetch(url2);
-    const data2 = await res2.json();
+    //const res2 = await fetch(url2);
+    //const data2 = await res2.json();
 
     console.log(data1);
 
     let bcv_rate;
+    let enparalelo_rate;
 
     if(res1.status !== 200) {
         console.log("Hubo un error: " + res1.status);
     } else {
         bcv_rate = data1.monitors.usd.price;
         bcv_rate_container.innerHTML = `<span>${bcv_rate.toFixed(1)}</span> Bs./USD`;
+
+        enparalelo_rate = data1.monitors.eur.price;
+        enparalelo_rate_container.innerHTML = `<span>${enparalelo_rate.toFixed(1)}</span> Bs./Euro`
     }
 
-    console.log(data2);
+    //console.log(data2);
 
-    let enparalelo_rate;
-
+    
+/*
     if(res2.status !== 200) {
         console.log("Hubo un error: " + res2.status);
     } else {
@@ -46,11 +50,8 @@ async function getRates(url1, url2) {
         //enparalelo_logo.appendChild(img);
 
         //enparalelo_title.innerHTML = `${data2.monitors.enparalelovzla.title}`
-
-        enparalelo_rate = data2.monitors.euro.price;
-        enparalelo_rate_container.innerHTML = `<span>${enparalelo_rate.toFixed(1)}</span> Bs./Euro`;
     }
-
+*/
     let average_rate;
 
     if(res1.status == 200 && res2.status == 200) {
@@ -64,4 +65,4 @@ async function getRates(url1, url2) {
     
 }
 
-getRates(bcv_url, bcv_eur_url);
+getRates(bcv_url);
