@@ -67,12 +67,12 @@ main {
     font-size: var(--md);
 }
 
-main div:nth-child(1), main div:nth-child(2) {
+.rate-container {
 	min-height: 20rem;
 	text-align: center;
 }
 
-main div:nth-child(3), main div:nth-child(4) {
+.info-container {
 	min-height: 10rem;
 	text-align: center;
 }
@@ -83,10 +83,14 @@ main div span {
 	color: var(--dark-red);
 }
 
-#bcv_logo img, #enparalelo_logo img  {
+h3 {
+	margin-top: 4rem;
+}
+
+#bcv_logo img, #enparalelo_logo img, #bitcoin_logo img  {
     width: 10rem;
 }
 
-#enparalelo_logo img  {
+/* #enparalelo_logo img  {
     width: 9rem;
-}
+} */
